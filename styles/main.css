@@ -1,0 +1,181 @@
+:root{
+    --primary: #EB6C27;
+    --text: #3a3a3a;
+    --bg: #fff;
+    --text--gray: #888888;
+}
+/* --- MAIN PAGE PROPERTIES --- */
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../Fonts/OPEN-SANS.ttf);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+
+.main--header{
+    background-image: url(../IMG/header-background.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- NAVIGATION PROPERTIES --- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg);
+    height: 92px;
+    width: 80%;
+    margin: 50px 205px;
+}
+.navlogo{
+    width: 200px;
+    height: 100%;
+}
+.navlink{
+    padding: 35px 30px;
+}
+.active{
+    background-color: var(--primary);
+    color: var(--bg);
+}
+.navlink:hover{
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+/*--- BUTTON PROPERTIES ---*/
+.btn--primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--bg);
+    align-items: center;
+    padding: 12px 40px;
+    gap: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 2em;
+}
+.btn--primary::after{
+    content: url(../IMG/arrow_back_24px.svg);
+}
+.btn--primary:active{
+    background-color: var(--primary);
+}
+.btn--dashed {
+    padding: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+    /*https://css-tricks.com/more-control-over-css-borders-with-background-image/* protože nemám tušení jak protáhnout čáru u buttonu*/
+    background-image: repeating-linear-gradient(177deg, var(--primary), var(--primary) 20px, transparent 20px, transparent 34px, var(--primary) 34px), repeating-linear-gradient(267deg, var(--primary), var(--primary) 20px, transparent 20px, transparent 34px, var(--primary) 34px), repeating-linear-gradient(-3deg, var(--primary), var(--primary) 20px, transparent 20px, transparent 34px, var(--primary) 34px), repeating-linear-gradient(87deg, var(--primary), var(--primary) 20px, transparent 20px, transparent 34px, var(--primary) 34px);
+    background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    color: var(--primary);
+    transition: 0.3s ease-in-out;
+}
+.btn--promote{
+    display: flex;
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 12px 40px;
+    justify-content: center;
+    max-width: 120px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.btn--dashed:hover{
+    font-size: 1.1em;
+    max-width: 150px;
+}
+/* --- HEADER PROPERTIES --- */
+.header--text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.title{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 120px;
+    line-height: 163px;
+    color: var(--bg);
+    margin: 0;
+}
+.title--undertext{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 82px;
+    letter-spacing: -0.05em;
+    color: var(--bg);
+    margin: 0;
+}
+
+/* --- MAIN PAGE PROPERTIES --- */
+.pagecontent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 50px;
+    padding-top: 50px;
+}
+
+
+/* grid*/
+.services{
+    display:flex;
+    flex-direction: column;
+}
+.service{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    grid-auto-flow: dense;
+}
+.service__img--right{
+    grid-column: 2;
+}
+
+/* promotion banner */
+.promotion{
+    background-image: url("../IMG/background-CTAblock-4460w.jpg");
+    background-color: #888888;
+    background-size: cover;
+    background-position: center center;
+    width: 84vw;
+    height: 50vh;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    padding: 10%;
+}
+.promote__text{
+    display: flex;
+    flex-direction: column;
+    color: var(--bg);
+    font-size: 30px;
+    font-weight: 700;
+}
