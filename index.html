@@ -11,6 +11,7 @@
     <header class="main--header">
         <nav class="navbar">
             <img class="navlogo" src="IMG/logo.svg">
+            <button class="page-navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
             <div class="navlinks">
                 <a class="navlink active">Domů</a>
                 <a class="navlink">Služby</a>
@@ -73,6 +74,42 @@
             <p class="promote__text">Za kvalitu naší práce ručíme.</p>
             <a class="btn--promote" href="#" >Přesvědčit se</a>
         </section>
+        <header class="page--header">
+            <h1 class="page--h1">Rádi vám ukážeme naše <b>reference</b></h1>
+            <section>Stojí za námi <b>kvalitně vyhotovené zakázky</b> dle konkrétních požadavků zadavatelů <b>podepřené letitými zkušenostmi ve stavebnictví</b>.
+                 To, že <b>obrátit se na právě nás je vhodná volba potvrdí naši klienti</b>,
+                 na jejichž stavbách jsme zanechali náš rukopis.
+                  Reference jsou jen zlomkem naší práce, 
+                  za kterou se rozhodně nestydíme.</section>
+        </header>
+        <div class="reference__items">
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka námi předělané hasičské stanice" src="IMG/hasičská zbrojnice.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Hasičská zbrojnice</p>
+                    <p class="reference-item__text">celková rekonstrukce</p>
+                </div>
+            </figure>
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka námi rekonstruované samoobslužné prádelny" src="IMG/prádelna.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Samoobslužná prádelna</p>
+                    <p class="reference-item__text">stavební úpravy a opravy</p>
+                </div>
+            </figure>
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka pro referenci venkovních ploch, které provádíme" src="IMG/nová komunikace.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Venkovní plochy Restyl</p>
+                    <p class="reference-item__text">provedení venkovnách ploch</p>
+                </div>
+            </figure>
+        </div>
     </div>
+    <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
 </body>
 </html>

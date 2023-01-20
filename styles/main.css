@@ -57,6 +57,23 @@ nav {
     color: var(--bg);
 }
 
+/* HAMBUREGER MENU */
+.page-navbar__hamburger {
+    padding: 0;
+    border: none;
+    background-color: white;
+
+    margin-right: 20px;
+    cursor: pointer;
+
+    font-family: Icons;
+    font-size: 2.7em;
+    color: var(--primary);
+    background-image: linear-gradient(45deg, #EB6C27, #FFBE9A);
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
 /*--- BUTTON PROPERTIES ---*/
 .btn--primary{
     display: flex;
@@ -145,7 +162,18 @@ nav {
     padding-top: 50px;
 }
 
-
+.page--header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+h1 b{
+    color: var(--primary);
+    font-weight: 700;
+}
 /* grid*/
 .services{
     display:flex;
@@ -156,11 +184,28 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     grid-auto-flow: dense;
+    padding-bottom: 50px;
+    align-items: center;
 }
 .service__img--right{
     grid-column: 2;
 }
 
+@media screen and (max-width: 1300px) {
+    .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+    }
+    .service__text{
+        max-width: 727px;
+    }
+    .service__img--right{
+        grid-column: 1;
+    }
+}
 /* promotion banner */
 .promotion{
     background-image: url("../IMG/background-CTAblock-4460w.jpg");
@@ -168,7 +213,7 @@ nav {
     background-size: cover;
     background-position: center center;
     width: 84vw;
-    height: 50vh;
+    height: 25vh;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     padding: 10%;
 }
@@ -178,4 +223,35 @@ nav {
     color: var(--bg);
     font-size: 30px;
     font-weight: 700;
+}
+
+/* REFERENCE */
+.reference__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.reference-item__img {
+    width: 320px;
+}
+
+.reference-item__heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.reference-item__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.reference__cta {
+    text-align: center;
 }
