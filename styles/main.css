@@ -9,7 +9,6 @@
     font-family: 'Open Sans';
     src: url(../Fonts/OPEN-SANS.ttf);
 }
-
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -17,8 +16,11 @@ body{
     background-color: var(--bg);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
-
+a{
+    text-decoration: none;
+}
 .main--header{
     background-image: url(../IMG/header-background.png);
     height: 100vh;
@@ -30,7 +32,6 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-
 /* --- NAVIGATION PROPERTIES --- */
 nav {
     display: flex;
@@ -148,7 +149,6 @@ nav {
     color: var(--bg);
     margin: 0;
 }
-
 /* --- MAIN PAGE PROPERTIES --- */
 .pagecontent
 {
@@ -161,7 +161,6 @@ nav {
     gap: 50px;
     padding-top: 50px;
 }
-
 .page--header{
     display: flex;
     flex-direction: column;
@@ -191,21 +190,6 @@ h1 b{
     grid-column: 2;
 }
 
-@media screen and (max-width: 1300px) {
-    .service{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        justify-content: center;
-    }
-    .service__text{
-        max-width: 727px;
-    }
-    .service__img--right{
-        grid-column: 1;
-    }
-}
 /* promotion banner */
 .promotion{
     background-image: url("../IMG/background-CTAblock-4460w.jpg");
@@ -254,4 +238,130 @@ h1 b{
 
 .reference__cta {
     text-align: center;
+}
+/* --- FOOTER PROPERTIES --- */
+footer{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary);
+}
+footer h1{
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 35px;
+}
+footer p{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 25px;
+}
+.btn--primary--no-arrow{
+    background-color: #ffffff;
+    color: var(--primary);
+    max-width: 180px;  
+    margin-bottom: 2em; 
+    font-weight: 700;
+    padding: 20px 40px;
+}
+/* RESPONSIVNOST PRO MOBILE */
+
+@media screen and (max-width: 360px) {
+
+}
+
+@media screen and (max-width: 1300px) {
+    .title{
+        font-size: 5em;
+    }
+    .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+    }
+    .service__text{
+        max-width: 727px;
+    }
+    .service__img--right{
+        grid-column: 1;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    .title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .title--text .btn--primary{
+        display: none;
+    }
+    .title--undertext{
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .navbar{
+            width: 100%;
+            margin: 0 auto;
+    }
+    .navlinks{
+        display: none;
+    }
+    .pagecontent{
+        padding-top: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    /* header */
+    .main--header{
+        height: 50vh;
+    }
+    .page--header{
+        align-items: flex-start;
+        padding-top: 10%;
+    }
+    .page--h1{
+        font-size: 20px;
+    }
+    .header--text a{
+        display: none;
+    }
+    /* services */ 
+    .service__img, .service__img--right{
+        max-width: 90vw;
+    }
+    .service__text h1{
+        font-size: 18px;
+    }
+    .service__text p{
+        font-size: 14px;
+    }
+    /* reference */
+    .reference__items{
+        max-width: 90vw;
+
+    }
+    /* promotion banner */
+    .promote__text{
+        font-size: 18px;
+        max-width: 75vw;
+    }
+    .btn--promote{
+        font-size: 15px;
+    }
+    /* footer */
+    footer h1{
+        font-size: 22px;
+    }
+    footer p{
+        text-align: center;
+        font-size: 17px;
+        max-width: 90vw;
+    }
 }
