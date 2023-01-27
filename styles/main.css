@@ -3,11 +3,16 @@
     --text: #3a3a3a;
     --bg: #fff;
     --text--gray: #888888;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 /* --- MAIN PAGE PROPERTIES --- */
 @font-face {
     font-family: 'Open Sans';
     src: url(../Fonts/OPEN-SANS.ttf);
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -17,10 +22,16 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none; 
 }
+
 a{
     text-decoration: none;
+    color: var(--text);
 }
+
 .main--header{
     background-image: url(../IMG/header-background.png);
     height: 100vh;
@@ -31,6 +42,9 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+.header--alt{
+    height: 20vh;
 }
 /* --- NAVIGATION PROPERTIES --- */
 nav {
@@ -48,6 +62,7 @@ nav {
 }
 .navlink{
     padding: 35px 30px;
+    transition: all 0.1s ease-in-out;
 }
 .active{
     background-color: var(--primary);
@@ -63,6 +78,7 @@ nav {
     padding: 0;
     border: none;
     background-color: white;
+    display: none;
 
     margin-right: 20px;
     cursor: pointer;
@@ -217,27 +233,62 @@ h1 b{
     gap: 40px;
     margin-bottom: 60px;
 }
-
+.reference-item{
+    position: relative;
+    width: 320px;
+    height: 200px;
+}
 .reference-item__img {
     width: 320px;
 }
-
 .reference-item__heading {
     text-align: center;
     font-weight: 700;
     font-size: 1.4em;
     margin: 10px 0;
+    display: none;
 }
-
 .reference-item__text {
     text-align: center;
     font-weight: 400;
     font-size: 0.8em;
     margin: 0;
+    display: none;
 }
-
 .reference__cta {
     text-align: center;
+}
+.reference-item__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    background-color: var(--primary);
+  }
+.reference-item:hover .reference-item__overlay {
+    opacity: 0.9;
+  }
+.reference-item__overlay__heading{
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+.reference-item__overlay__text{
+    color: var(--bg);
+    font-weight: 400;
+    font-size: 0.8em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 /* --- FOOTER PROPERTIES --- */
 footer{
@@ -248,7 +299,7 @@ footer{
     background-color: var(--primary);
 }
 footer h1{
-    color: #ffffff;
+    color: var(--bg);
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -256,22 +307,72 @@ footer h1{
     line-height: 35px;
 }
 footer p{
-    color: #ffffff;
+    color: var(--bg);
     font-weight: 300;
     font-size: 25px;
 }
 .btn--primary--no-arrow{
-    background-color: #ffffff;
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--bg);
     max-width: 180px;  
     margin-bottom: 2em; 
     font-weight: 700;
     padding: 20px 40px;
+    transition: 0.2s ease-in-out;
 }
-/* RESPONSIVNOST PRO MOBILE */
+.inverted{
+    background-color: var(--bg);
+    color: var(--primary);
+}
+.btn--primary--no-arrow:hover{
+    font-size: 1.1em;
+}
+/* SPECIÁLNÍ NASTAVENÍ PRO KONTAKT.HTML */
+.grid__contact{
+    max-width: 1280px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid__contact__info{
+    display: flex;
+    flex-direction: column;
+}
+.map{
+    width:600px; 
+    height:400px;
+}
+.grid__contact__info span{
+    display: flex;
+    align-items: center;
+}
+span > p{
+    margin: 0;
+}
+.grid__contact__info span::before {
+    display: block;
+    margin-right: 20px;
+    content: "";
+    background-image: url(../IMG/mail_24px.svg);
+    background-color: var(--primary);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.grid__contact__info span:first-of-type:before {
+    background-image: url(../IMG/local_phone_24px.svg);
+}
+.grid__contact__info span:last-of-type::before {
+    background-image: url(../IMG/room_24px.svg);
+}
+
+
+/* =========== RESPONSIVNOST PRO MOBILE =========== */
 
 @media screen and (max-width: 360px) {
-
 }
 
 @media screen and (max-width: 1300px) {
@@ -313,6 +414,9 @@ footer p{
     .navlinks{
         display: none;
     }
+    .page-navbar__hamburger{
+        display: block;
+    }
     .pagecontent{
         padding-top: 0;
         margin-left: 10%;
@@ -345,8 +449,17 @@ footer p{
     /* reference */
     .reference__items{
         max-width: 90vw;
-
     }
+    .reference-item__info{
+        padding-bottom: 60px;
+    }
+    .reference-item__heading{
+        display: block;
+    }
+    .reference-item__text{
+        display: block;
+    }
+
     /* promotion banner */
     .promote__text{
         font-size: 18px;

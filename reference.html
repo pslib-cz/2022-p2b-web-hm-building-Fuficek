@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title></title>
+</head>
+<body>
+    <header class="main--header header--alt">
+        <nav class="navbar">
+            <img class="navlogo" src="IMG/logo.svg">
+            <button class="page-navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
+            <div class="navlinks">
+                <a class="navlink" href="index.html">Domů</a>
+                <a class="navlink" href="sluzby.html">Služby</a>
+                <a class="navlink active" href="#">Reference</a>
+                <a class="navlink" href="about.html">O nás</a>
+                <a class="navlink" href="kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagecontent">
+        <div class="reference__items">
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka námi předělané hasičské stanice" src="IMG/hasičská zbrojnice.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Hasičská zbrojnice</p>
+                    <p class="reference-item__text">celková rekonstrukce</p>
+                </div>
+            </figure>
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka námi rekonstruované samoobslužné prádelny" src="IMG/prádelna.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Samoobslužná prádelna</p>
+                    <p class="reference-item__text">stavební úpravy a opravy</p>
+                </div>
+            </figure>
+            <figure class="reference-item">
+                <img class="reference-item__img" alt="Fotka pro referenci venkovních ploch, které provádíme" src="IMG/nová komunikace.png">
+                <div class="reference-item__info">
+                    <p class="reference-item__heading">Venkovní plochy Restyl</p>
+                    <p class="reference-item__text">provedení venkovnách ploch</p>
+                </div>
+            </figure>
+        </div>
+    </div>
+    <footer>
+        <h1>Plácneme si pro Váš projekt?  </h1>
+        <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <a class="btn--primary--no-arrow" href="#">Nezávazně poptat</a>
+    </footer>
+    <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
+</body>
+</html>

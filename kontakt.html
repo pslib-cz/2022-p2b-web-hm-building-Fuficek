@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+    <title></title>
+</head>
+<body>
+    <header class="main--header header--alt">
+        <nav class="navbar">
+            <img class="navlogo" src="IMG/logo.svg">
+            <button class="page-navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
+            <div class="navlinks">
+                <a class="navlink active" href="index.html">Domů</a>
+                <a class="navlink" href="sluzby.html">Služby</a>
+                <a class="navlink" href="reference.html">Reference</a>
+                <a class="navlink" href="about.html">O nás</a>
+                <a class="navlink" href="kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagecontent">
+        <header class="page--header">
+            <h1 class="page--h1">Kontaktujte nás</b></h1>
+            <section>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</section>
+        </header>
+        <div class="grid__contact">
+            <section class="grid__contact__info">
+                <span><p>+420 775 550 564</p></span>
+                <span><a href="mailto:stavby@hm-building.cz">stavby@hm-building.cz</a></span>
+                <span><a>Křižanská 12, Liberec XXII-Horní Suchá</a></span>
+            </section>
+            <div id="mapa" class="map"></div>
+        </div>
+    </div>
+    <footer>
+        <h1>Plácneme si pro Váš projekt?  </h1>
+        <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <a class="btn--primary--no-arrow" href="#">Nezávazně poptat</a>
+    </footer>
+    <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
+    <script type="text/javascript">
+            var stred = SMap.Coords.fromWGS84(15.0022033, 50.7606878);
+            var mapa = new SMap(JAK.gel("mapa"), stred, 17);
+            mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+            mapa.addDefaultControls();
+        </script>
+</body>
+</html>
