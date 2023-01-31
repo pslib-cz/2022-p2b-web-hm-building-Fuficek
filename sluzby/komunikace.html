@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title></title>
+</head>
+<body>
+    <header class="main--header header--alt">
+        <nav class="navbar">
+            <a href="index.html"><img class="navlogo" src="IMG/logo.svg"></a>
+            <button class="page-navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
+            <div class="navlinks">
+                <a class="navlink active" href="index.html">Domů</a>
+                <a class="navlink" href="index.html#services">Služby</a>
+                <a class="navlink" href="reference.html">Reference</a>
+                <a class="navlink" href="about.html">O nás</a>
+                <a class="navlink" href="kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagecontent">
+        
+    </div>
+    <footer>
+        <h1>Plácneme si pro Váš projekt?  </h1>
+        <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <a class="btn--primary--no-arrow" href="#">Nezávazně poptat</a>
+    </footer>
+    <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
+</body>
+</html>

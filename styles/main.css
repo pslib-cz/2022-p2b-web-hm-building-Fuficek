@@ -226,6 +226,18 @@ h1 b{
 }
 
 /* REFERENCE */
+.reference__heading{
+    text-align: center;
+    max-width: 900px;
+}
+.reference__heading h1{
+    font-weight: 700;
+    font-size: 3em;
+}
+.reference__undertext{
+    text-align: center;
+    font-weight: 400;
+}
 .reference__items {
     display: flex;
     flex-wrap: wrap;
@@ -461,8 +473,6 @@ form select:focus{
     .navbar{
         padding-bottom:  0;
     }
-    .form__group .btn--primary--no-arrow{
-    }
 }
 @media screen and (max-width: 990px) {
     .header--alt{
@@ -524,8 +534,8 @@ form select:focus{
     .reference__items{
         max-width: 90vw;
     }
-    .reference-item__info{
-        padding-bottom: 60px;
+    .reference-item{
+        padding-bottom: 40px;
     }
     .reference-item__heading{
         display: block;
@@ -533,6 +543,9 @@ form select:focus{
     .reference-item__text{
         display: block;
     }
+    .reference-item:hover .reference-item__overlay {
+        opacity: 0;
+      }
     form a{
         max-width: 80%;
     }
