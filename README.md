@@ -5,7 +5,7 @@ https://pslib-cz.github.io/2022-p2b-web-hm-building-Fuficek/
 * [ ] Navigaci strukturovat jako **nav menu li a** viz výklad ve výuce 
 * [ ] Správný **h1** hlavní stránky je celý řetězec „HM Building.cz s.r.o. liberecká stavební společnost", ne jen jeho část 
 * [ ] **h1** může být na stránce pouze jednou 
-* [ ] Namísto **div** lépe strukturovat obsah stránky třeba do **section**, ideálně bloky obsahu (služby, kontejner s CTA) 
+* [ ] Namísto **div** lépe strukturovat obsah stránky třeba do **section**, ideálně bloky obsahu (služby, kontejner s <a target="blank" href="https://www.terapie-autismu.cz/">CTA</a>) 
 * [ ] Atribut alt u <img> by měl obsahem vypovídat o obrázku, viz Koderovo desatero 
 * [ ] Nepojmenovávejte obrázky s diakritikou a nepoužívejte v názvech mezery (nahraďte - nebo _). Dělá to jen problémy. 
 * [ ] V kontejneru .page--header je **section** použit nesprávně, text by měl obalovat **p**
