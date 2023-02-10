@@ -4,7 +4,7 @@ https://pslib-cz.github.io/2022-p2b-web-hm-building-Fuficek/
 * [ ] HTML není validní— překontrolujte ve validátoru a vyřešte chyby (a doporučení) 
 * [ ] Navigaci strukturovat jako **nav menu li a** viz výklad ve výuce 
 * [ ] Správný <hl> hlavní stránky je celý řetězec „HM Building.cz s.r.o. liberecká stavební společnost", ne jen jeho část 
-* [ ] <hl> může být na stránce pouze jednou 
+* [ ] **hl** může být na stránce pouze jednou 
 * [ ] Namísto **div** lépe strukturovat obsah stránky třeba do **section**, ideálně bloky obsahu (služby, kontejner s CTA) 
 * [ ] Atribut alt u <img> by měl obsahem vypovídat o obrázku, viz Koderovo desatero 
 * [ ] Nepojmenovávejte obrázky s diakritikou a nepoužívejte v názvech mezery (nahraďte - nebo _). Dělá to jen problémy. 
