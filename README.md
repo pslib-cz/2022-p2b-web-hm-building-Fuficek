@@ -14,4 +14,4 @@ https://pslib-cz.github.io/2022-p2b-web-hm-building-Fuficek/
 * [ ] font nastavujte v jednotkách em/rem a ne v px namísto px používejte em/rem i mimo text 
 * [ ] Na webu používáte nadbytečně flexbox, viz například „.pagecontent", „.pag--header", „.services", na index stránce. Respektujte přirozený tok obsahu stránky (content flow). Do sloupce to není vždy potřeba „cpát" flexboxem — zkuste je povypínat a zjistíte, že to dělá totéž. Pracujte s box modelem. 
 * [ ] Chybí ikona hamburger menu v navigaci + navigace není na mobilu funkční. 
-* [ ] Kontejner .main--header by neměl být přes celou výšku obrazovky (100vh), ale třeba max. 80vh. Viz grafický návrh. 
+* [X] Kontejner .main--header by neměl být přes celou výšku obrazovky (100vh), ale třeba max. 80vh. Viz grafický návrh. 
