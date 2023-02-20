@@ -26,15 +26,17 @@ body{
     -ms-user-select: none;
     user-select: none; 
 }
-
 a{
     text-decoration: none;
     color: var(--text);
 }
-
+a:active{
+    color: var(--bg);
+    background-color: none;
+}
 .main--header{
     background-image: url(../IMG/header-background.png);
-    height: 100vh;
+    height: 95vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +48,6 @@ a{
 .header--alt{
     height: 20vh;
 }
-/* --- NAVIGATION PROPERTIES --- */
 nav {
     display: flex;
     align-items: center;
@@ -63,6 +64,7 @@ nav {
 .navlink{
     padding: 35px 30px;
     transition: all 0.1s ease-in-out;
+    text-transform: uppercase;
 }
 .active{
     background-color: var(--primary);
@@ -72,17 +74,13 @@ nav {
     background-color: var(--primary);
     color: var(--bg);
 }
-
-/* HAMBUREGER MENU */
 .page-navbar__hamburger {
     padding: 0;
     border: none;
     background-color: white;
     display: none;
-
     margin-right: 20px;
     cursor: pointer;
-
     font-family: Icons;
     font-size: 2.7em;
     color: var(--primary);
@@ -90,8 +88,6 @@ nav {
     background-size: 100%;
     background-repeat: repeat;
 }
-
-/*--- BUTTON PROPERTIES ---*/
 .btn--primary{
     display: flex;
     flex-direction: row;
@@ -141,7 +137,6 @@ nav {
     font-size: 1.1em;
     max-width: 150px;
 }
-/* --- HEADER PROPERTIES --- */
 .header--text{
     display: flex;
     flex-direction: column;
@@ -165,7 +160,6 @@ nav {
     color: var(--bg);
     margin: 0;
 }
-/* --- MAIN PAGE PROPERTIES --- */
 .pagecontent
 {
     display: flex;
@@ -189,7 +183,6 @@ h1 b{
     color: var(--primary);
     font-weight: 700;
 }
-/* grid*/
 .services{
     display:flex;
     flex-direction: column;
@@ -205,8 +198,6 @@ h1 b{
 .service__img--right{
     grid-column: 2;
 }
-
-/* promotion banner */
 .promotion{
     background-image: url("../IMG/background-CTAblock-4460w.jpg");
     background-color: #888888;
@@ -224,8 +215,6 @@ h1 b{
     font-size: 30px;
     font-weight: 700;
 }
-
-/* REFERENCE */
 .reference__heading{
     text-align: center;
     max-width: 900px;
@@ -302,7 +291,6 @@ h1 b{
     display: flex;
     justify-content: center;
 }
-/* --- FOOTER PROPERTIES --- */
 footer{
     padding: 30px 0px;
     display: flex;
@@ -338,7 +326,6 @@ footer p{
 .btn--primary--no-arrow:hover{
     font-size: 1.1em;
 }
-/* ====== SPECIÁLNÍ NASTAVENÍ PRO KONTAKT.HTML ===== */
 .grid__contact{
     max-width: 1280px;
     align-self: center;
@@ -417,7 +404,6 @@ form textarea{
     font-weight: 400;
     margin-bottom: 0.5em;
     font-family: 'Open Sans';
-    /* number of predefined rows */
     min-height: 130px;
 }
 form textarea:focus{
@@ -445,11 +431,32 @@ form select:focus{
 .form__group a:hover{
     font-size: 0.8em;
 }
-/* =========== RESPONSIVNOST PRO MOBILE =========== */
-
-@media screen and (max-width: 360px) {
+ .sluzby{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+ }
+ .sluzby section{
+    width: 80%;
+ }
+.sluzby__heading{
+    align-self: center;
 }
-
+.sluzby section ul li{
+    margin-left: 2.5em;
+    padding: 0;
+}
+.sluzby section ul li::marker{
+    color: var(--primary);
+    font-size: 1.5em;
+}
+.sluzby section ul{
+    list-style-type: disc;
+}
+/* =========== RESPONSIVNOST PRO MOBILE =========== */
 @media screen and (max-width: 1300px) {
     .header--alt{
         height: 200px !important;
@@ -506,7 +513,6 @@ form select:focus{
         margin-left: 10%;
         margin-right: 10%;
     }
-    /* header */
     .main--header{
         height: 50vh;
     }
@@ -520,7 +526,6 @@ form select:focus{
     .header--text a{
         display: none;
     }
-    /* services */ 
     .service__img, .service__img--right{
         max-width: 90vw;
     }
@@ -530,7 +535,6 @@ form select:focus{
     .service__text p{
         font-size: 14px;
     }
-    /* reference */
     .reference__items{
         max-width: 90vw;
     }
@@ -549,7 +553,6 @@ form select:focus{
     form a{
         max-width: 80%;
     }
-    /* promotion banner */
     .promote__text{
         font-size: 18px;
         max-width: 75vw;
@@ -557,7 +560,6 @@ form select:focus{
     .btn--promote{
         font-size: 15px;
     }
-    /* footer */
     footer h1{
         font-size: 22px;
     }
@@ -574,4 +576,10 @@ form select:focus{
         width: 90vw;
         height: 300px;
     }
+    .sluzby section ul li{
+        margin-left: 0;
+    }
+    .sluzby section{
+        width: 100%;
+     }
 }

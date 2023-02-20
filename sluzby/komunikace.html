@@ -4,30 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <title></title>
 </head>
 <body>
     <header class="main--header header--alt">
         <nav class="navbar">
-            <a href="index.html"><img class="navlogo" src="IMG/logo.svg"></a>
+            <a href="../index.html"><img class="navlogo" src="../IMG/logo.svg"></a>
             <button class="page-navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
             <div class="navlinks">
-                <a class="navlink active" href="index.html">Domů</a>
-                <a class="navlink" href="index.html#services">Služby</a>
-                <a class="navlink" href="reference.html">Reference</a>
-                <a class="navlink" href="about.html">O nás</a>
-                <a class="navlink" href="kontakt.html">Kontakt</a>
+                <a class="navlink" href="../index.html">Domů</a>
+                <a class="navlink active" href="../index.html#services">Služby</a>
+                <a class="navlink" href="../reference.html">Reference</a>
+                <a class="navlink" href="../about.html">O nás</a>
+                <a class="navlink" href="../kontakt.html">Kontakt</a>
             </div>
         </nav>
     </header>
     <div class="pagecontent">
-        
+        <main class="sluzby">
+            <h1 class="sluzby__heading">Komunikace a zpevněné plochy</h1>
+            <section>
+                <p>Komunikace a zpevněné plochy provádíme <b>včetně zemních prací, 
+                    konstrukcí podkladních</b> a souvisejících objektů, jako jsou <b>odvodnění, zpevnění svahů, opěrné zdi</b> atd.</p>
+                <p><b>Kryt komunikace</b></p>
+                <ul>
+                    <li>živočišný</li>
+                    <li>betonový</li>
+                    <li>dlážděný (kámen, betonová dlažba...)</li>
+                </ul>
+                <p>Při realizaci jakékoliv zpevněné plochy <b>dokážeme navrhnout celkovou skladbu konstrukce</b>, 
+                    s ohledem na její způsob použití a umístění.</p>
+                <ul>
+                    <li>zemní práce</li>
+                    <li>podklady pod komunikace</li>
+                    <li>komunikace pro pěší i pojezdové</li>
+                </ul>
+            </section>
+        </main>
     </div>
     <footer>
         <h1>Plácneme si pro Váš projekt?  </h1>
         <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-        <a class="btn--primary--no-arrow" href="#">Nezávazně poptat</a>
+        <a class="btn--primary--no-arrow inverted" href="#">Nezávazně poptat</a>
     </footer>
     <script>
         function Hamburger() {
